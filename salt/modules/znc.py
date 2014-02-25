@@ -4,7 +4,7 @@ znc - An advanced IRC bouncer
 
 .. versionadded:: Helium
 
-Provides an interace to basic ZNC functionality
+Provides an interface to basic ZNC functionality
 '''
 
 # Import python libs
@@ -41,9 +41,9 @@ def _makepass(password, hasher='sha256'):
     else:
         return NotImplemented
 
-    c = "abcdefghijklmnopqrstuvwxyz" \
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
-        "0123456789!?.,:;/*-+_()"
+    c = 'abcdefghijklmnopqrstuvwxyz' \
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ' \
+        '0123456789!?.,:;/*-+_()'
     r = {
         'Method': h.name,
         'Salt': ''.join(random.choice(c) for x in xrange(20)),
